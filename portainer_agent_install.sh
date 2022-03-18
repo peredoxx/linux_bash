@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo Registered user: $USER
-echo Do you want to install Docker Engine?
+echo Do you want to install Portainer Agent?
 read -p "Continue (y/n)?" choice
 case "$choice" in 
   y|Y ) 
