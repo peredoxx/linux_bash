@@ -3,7 +3,7 @@
 echo Registered user: $USER
 echo Do you want to install Portainer?
 read -p "Continue (y/n)?" choice
-case "$choice" in
+case "$choice" in 
   y|Y )
   
   #Screate the volume
