@@ -1,5 +1,7 @@
 # linux_bash
 
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
+
 Select the script you want to download and go to raw.
 
 Example:
