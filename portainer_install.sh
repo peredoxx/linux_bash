@@ -6,7 +6,7 @@ read -p "Continue (y/n)?" choice
 case "$choice" in
   y|Y )
   
-  #Screate the volume
+  #Screate the volume 
   
   sudo docker volume create portainer_data
   
