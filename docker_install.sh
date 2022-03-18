@@ -6,7 +6,7 @@ read -p "Continue (y/n)?" choice
 case "$choice" in 
   y|Y ) 
 
-  #Set up the repository
+  #Set up the repository 
 
   sudo apt-get update
   sudo apt-get install ca-certificates curl gnupg lsb-release -y
