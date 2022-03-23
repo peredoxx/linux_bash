@@ -3,21 +3,11 @@
 # System Patchen
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 
-sleep 2
-
 # Proxmox Guest Agent Install
 sudo apt-get install qemu-guest-agent -y
 
-sleep 2
-
 # Add Public SSH Key for Login
-echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJP0UlWs4SDL/6vXwOoiRifRURatDX3MAfeaY4AASZT32eghODk4jAcnZLyjs2O7KtsOB9qM+rOzyHCYYeqDFbUlaYr1ox5IaUBDgCEKYR/6e1n7McDcoOVVMKjNCd7D6vxOMYZzqW1TijAygMzesJuiXvE+FQAgiCOqn2jHi4qFLqcJgzUlKFrGZnbEIVdEBetLxqShcl/wkVwXsxH3kJcOMxYTxL/TH+9xGJZi/myewldgIPxXJAkEX5g+uiujuASqWbYRmBfmAXrmVbrCkzsW7z7PFyJAn8vyBrlQsoS/tZfDRXzYVw/dHxbTg5SPvu2uTjYspcZ0khfV6fdpDh0Y2aCuw7y+ldyRhIctisB6Db3OxV5lPY1FZpJJMYV/7KQBWPkuevmbsSs9Ire9hT8LBT2kfYhRn7VS7GKLhONqmL2exrV9i0+8RmygvKycqcWB3aEiVlEoOPV7kkN24CqevV686m5pyqt6EUjMQWWx6tk116VbLX2P7LzpTCb5UptlWdqPZHM3fU9V6KW1IJqFUIma4Zb7ur1gcPIctT/14WjLZgIJd5Z41Du9Fx0RDJtRY7LXBMUT1QEag47AAo+rYliQLtXcD+GKAC7wYcubbFd6q3g5wU8pD+C6CVTwP7f2FllXzwV0d7Y5VV2WoDl8G6Pj8QxBW4uR+LU/5cZQ== philipp.pauli@fastinbox.de >> ~/.ssh/authorized_keys
-
-sleep 2
-
-/etc/init.d/ssh restart
-
-sleep 2
+echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJP0UlWs4SDL/6vXwOoiRifRURatDX3MAfeaY4AASZT32eghODk4jAcnZLyjs2O7KtsOB9qM+rOzyHCYYeqDFbUlaYr1ox5IaUBDgCEKYR/6e1n7McDcoOVVMKjNCd7D6vxOMYZzqW1TijAygMzesJuiXvE+FQAgiCOqn2jHi4qFLqcJgzUlKFrGZnbEIVdEBetLxqShcl/wkVwXsxH3kJcOMxYTxL/TH+9xGJZi/myewldgIPxXJAkEX5g+uiujuASqWbYRmBfmAXrmVbrCkzsW7z7PFyJAn8vyBrlQsoS/tZfDRXzYVw/dHxbTg5SPvu2uTjYspcZ0khfV6fdpDh0Y2aCuw7y+ldyRhIctisB6Db3OxV5lPY1FZpJJMYV/7KQBWPkuevmbsSs9Ire9hT8LBT2kfYhRn7VS7GKLhONqmL2exrV9i0+8RmygvKycqcWB3aEiVlEoOPV7kkN24CqevV686m5pyqt6EUjMQWWx6tk116VbLX2P7LzpTCb5UptlWdqPZHM3fU9V6KW1IJqFUIma4Zb7ur1gcPIctT/14WjLZgIJd5Z41Du9Fx0RDJtRY7LXBMUT1QEag47AAo+rYliQLtXcD+GKAC7wYcubbFd6q3g5wU8pD+C6CVTwP7f2FllXzwV0d7Y5VV2WoDl8G6Pj8QxBW4uR+LU/5cZQ== philipp.pauli@fastinbox.de >> /home/serveradmin/.ssh/authorized_keys
 
 # Enable automatic patches 
 sudo apt install unattended-upgrades apt-listchanges -y
