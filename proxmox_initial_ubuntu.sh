@@ -22,7 +22,7 @@ fi
 # To directly modify sshd_config.
 
 sed -i 's/#\?\(Port\s*\).*$/\1 22/' /etc/ssh/sshd_config
-sed -i 's/#\?\(Protocol\s*\).*$/\1 2/' /etc/ssh/sshd_config
+echo "Protocol 2" >> /etc/ssh/sshd_config
 sed -i 's/#\?\(AddressFamily\s*\).*$/\1 any/' /etc/ssh/sshd_config
 sed -i 's/#\?\(SyslogFacility\s*\).*$/\1 AUTHPRIV/' /etc/ssh/sshd_config
 sed -i 's/#\?\(LogLevel\s*\).*$/\1 INFO/' /etc/ssh/sshd_config
