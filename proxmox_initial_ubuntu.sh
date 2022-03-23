@@ -22,10 +22,21 @@ fi
 # To directly modify sshd_config.
 
 sed -i 's/#\?\(Port\s*\).*$/\1 22/' /etc/ssh/sshd_config
+sed -i 's/#\?\(Protocol\s*\).*$/\1 2/' /etc/ssh/sshd_config
+sed -i 's/#\?\(AddressFamily\s*\).*$/\1 any/' /etc/ssh/sshd_config
+sed -i 's/#\?\(SyslogFacility\s*\).*$/\1 AUTHPRIV/' /etc/ssh/sshd_config
+sed -i 's/#\?\(LogLevel\s*\).*$/\1 INFO/' /etc/ssh/sshd_config
+sed -i 's/#\?\(LoginGraceTime\s*\).*$/\1 60/' /etc/ssh/sshd_config
 sed -i 's/#\?\(PermitRootLogin\s*\).*$/\1 no/' /etc/ssh/sshd_config
+sed -i 's/#\?\(StrictModes\s*\).*$/\1 yes/' /etc/ssh/sshd_config
+sed -i 's/#\?\(MaxAuthTries\s*\).*$/\1 3/' /etc/ssh/sshd_config
+sed -i 's/#\?\(MaxSessions\s*\).*$/\1 2/' /etc/ssh/sshd_config
 sed -i 's/#\?\(PubkeyAuthentication\s*\).*$/\1 yes/' /etc/ssh/sshd_config
 sed -i 's/#\?\(PermitEmptyPasswords\s*\).*$/\1 no/' /etc/ssh/sshd_config
 sed -i 's/#\?\(PasswordAuthentication\s*\).*$/\1 no/' /etc/ssh/sshd_config
+sed -i 's/#\?\(ClientAliveInterval\s*\).*$/\1 1800/' /etc/ssh/sshd_config
+sed -i 's/#\?\(ClientAliveCountMax\s*\).*$/\1 2/' /etc/ssh/sshd_config
+sed -i 's/#\?\(Compression\s*\).*$/\1 no/' /etc/ssh/sshd_config
 
 # Check the exit status of the last command
 
