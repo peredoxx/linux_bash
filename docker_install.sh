@@ -43,9 +43,9 @@ read -p "Continue (y/n)?" choice
 case "$choice" in 
   y|Y ) 
   
-  #Add your user to the docker group
+  #Add your user serveradmin to the docker group
   
-  sudo usermod -aG docker $USER
+  sudo usermod -aG docker serveradmin
   ;;
   
   n|N ) echo "Installation aborted";; 
