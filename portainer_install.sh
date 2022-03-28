@@ -12,7 +12,7 @@ case "$choice" in
   
   #Download and install the Portainer server container
   
-  docker run -d -p 80:8000 -p 443:9443 --name portainer-int --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+  docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.9.3
   
   ;;
   
