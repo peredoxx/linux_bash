@@ -45,7 +45,7 @@ case "$choice" in
   
   #Add your user serveradmin to the docker group
   
-  sudo usermod -aG docker serveradmin
+  sudo usermod -aG docker ${USER}
   ;;
   
   n|N ) echo "Installation aborted";; 
