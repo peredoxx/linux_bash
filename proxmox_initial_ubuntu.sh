@@ -1,7 +1,16 @@
 #!/bin/bash
 
+# Modifying /etc/ssh/sshd_conf
+if [[ "${UID}" -ne 0 ]]; then
+    echo " You need to run this script as root"
+    exit 1
+fi
+
 # System Patchen
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
+
+#Set Time to Europe
+sudo timedatectl set-timezone Europe/Berlin
 
 # Proxmox Guest Agent Install
 sudo apt-get install qemu-guest-agent -y
@@ -12,12 +21,6 @@ echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJP0UlWs4SDL/6vXwOoiRifRURatDX3MAfeaY
 # Enable automatic patches 
 sudo apt install unattended-upgrades apt-listchanges -y
 sudo dpkg-reconfigure -plow unattended-upgrades
-
-# Modifying /etc/ssh/sshd_conf
-if [[ "${UID}" -ne 0 ]]; then
-    echo " You need to run this script as root"
-    exit 1
-fi
 
 # To directly modify sshd_config.
 
